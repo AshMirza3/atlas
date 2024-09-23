@@ -30,7 +30,7 @@
 
     <!-- Sports Sections -->
     <div id="sports" class="container mx-auto mt-8 p-4">
-        <!-- Dynamic sports list that will be populated by JavaScript -->
+        <!-- Dynamic sports list populated by JavaScript -->
         <div id="sport-list" class="grid grid-cols-2 sm:grid-cols-4 gap-6"></div>
     </div>
 
@@ -56,14 +56,35 @@
     <script>
         // Data for sports
         const sports = ["Basketball", "Football", "Volleyball", "Table Tennis", "Scrabble", "Chess", "Rowing", "Cricket"];
-        const matches = [
-            { match: "Match 1", teams: "Streeton vs Frere" },
-            { match: "Match 2", teams: "Papworth vs Napier" },
-            { match: "Match 3", teams: "Frere vs Papworth" },
-            { match: "Match 4", teams: "Streeton vs Napier" },
-            { match: "Match 5", teams: "Napier vs Frere" },
-            { match: "Match 6", teams: "Streeton vs Papworth" }
-        ];
+        
+        // Mock match data (including sport-specific scores and Player of the Match)
+        const matchData = {
+            "Basketball": [
+                { match: "Match 1", teams: "Streeton vs Frere", score: "48 - 42", player: "John Doe" },
+                { match: "Match 2", teams: "Papworth vs Napier", score: "54 - 51", player: "Alex Smith" },
+                { match: "Match 3", teams: "Frere vs Papworth", score: "39 - 45", player: "Michael Brown" },
+                { match: "Match 4", teams: "Streeton vs Napier", score: "60 - 58", player: "David Lee" },
+                { match: "Match 5", teams: "Napier vs Frere", score: "50 - 47", player: "Chris Evans" },
+                { match: "Match 6", teams: "Streeton vs Papworth", score: "45 - 50", player: "James Bond" }
+            ],
+            "Football": [
+                { match: "Match 1", teams: "Streeton vs Frere", score: "2 - 1", player: "David Beckham" },
+                { match: "Match 2", teams: "Papworth vs Napier", score: "1 - 1", player: "Cristiano Ronaldo" },
+                { match: "Match 3", teams: "Frere vs Papworth", score: "3 - 2", player: "Lionel Messi" },
+                { match: "Match 4", teams: "Streeton vs Napier", score: "2 - 3", player: "Kylian Mbappé" },
+                { match: "Match 5", teams: "Napier vs Frere", score: "0 - 0", player: "Neymar" },
+                { match: "Match 6", teams: "Streeton vs Papworth", score: "4 - 2", player: "Mo Salah" }
+            ],
+            "Cricket": [
+                { match: "Match 1", teams: "Streeton vs Frere", score: "120/7 - 119/10", player: "Virat Kohli" },
+                { match: "Match 2", teams: "Papworth vs Napier", score: "160/6 - 158/9", player: "Joe Root" },
+                { match: "Match 3", teams: "Frere vs Papworth", score: "110/10 - 112/8", player: "Ben Stokes" },
+                { match: "Match 4", teams: "Streeton vs Napier", score: "140/5 - 135/10", player: "Rohit Sharma" },
+                { match: "Match 5", teams: "Napier vs Frere", score: "130/8 - 120/10", player: "Steve Smith" },
+                { match: "Match 6", teams: "Streeton vs Papworth", score: "150/4 - 148/10", player: "AB de Villiers" }
+            ]
+            // Add mock data for other sports here (Volleyball, Table Tennis, etc.)
+        };
 
         const sportListContainer = document.getElementById("sport-list");
         const matchListContainer = document.getElementById("match-list");
@@ -97,18 +118,17 @@
             document.getElementById("matches-section").style.display = "block";
             matchListContainer.innerHTML = ""; // Clear previous matches
 
+            // Fetch match data for the selected sport
+            const matches = matchData[sport] || [];
+
             matches.forEach(match => {
-                // Create match row
+                // Create match row with mock data
                 const matchRow = document.createElement("tr");
                 matchRow.innerHTML = `
                     <td class="border px-4 py-2">${match.match}</td>
                     <td class="border px-4 py-2">${match.teams}</td>
-                    <td class="border px-4 py-2">
-                        <input type="text" placeholder="${sport === 'Cricket' ? 'Runs' : 'Score'}" class="border rounded px-2 py-1 w-full">
-                    </td>
-                    <td class="border px-4 py-2">
-                        <input type="text" placeholder="Player of the Match" class="border rounded px-2 py-1 w-full">
-                    </td>
+                    <td class="border px-4 py-2">${match.score}</td>
+                    <td class="border px-4 py-2">${match.player}</td>
                 `;
                 matchListContainer.appendChild(matchRow);
             });
