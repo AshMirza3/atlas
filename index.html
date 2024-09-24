@@ -3,137 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>atlas.kgs</title>
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Hide all sports sections initially */
-        .sports-section, .matches-section {
-            display: none;
-        }
-    </style>
+    <title>Interhouse Matches 24-25</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body>
 
-    <!-- Header -->
-    <header class="bg-blue-800 text-white text-center py-6">
-        <h1 class="text-3xl font-bold">Interhouse Matches 2024-2025</h1>
+    <!-- Header Section -->
+    <header class="flex justify-between items-center p-4 bg-blue-800 text-white">
+        <!-- KGS (Streeton logo as a placeholder) -->
+        <div>
+            <img src="C:/Users/arsha/Downloads/Schl related/KGS/ATLAS WORK/house logos/Streeton.jpg" alt="KGS Logo" class="h-12">
+        </div>
+        
+        <!-- Main Heading -->
+        <h1 class="text-center text-3xl font-bold flex-grow">Interhouse Matches 24-25</h1>
+        
+        <!-- Atlas Logo -->
+        <div>
+            <img src="C:/Users/arsha/Downloads/Schl related/KGS/ATLAS WORK/house logos/atlas logo.jpg" alt="Atlas Logo" class="h-12">
+        </div>
     </header>
 
-    <!-- Main Navigation -->
-    <nav class="flex justify-center space-x-8 mt-6">
-        <button class="level-btn text-xl font-semibold hover:text-blue-600 focus:text-blue-800" data-level="a-boys">A Level Boys</button>
-        <button class="level-btn text-xl font-semibold hover:text-blue-600 focus:text-blue-800" data-level="a-girls">A Level Girls</button>
-        <button class="level-btn text-xl font-semibold hover:text-blue-600 focus:text-blue-800" data-level="o-boys">O Level Boys</button>
-        <button class="level-btn text-xl font-semibold hover:text-blue-600 focus:text-blue-800" data-level="o-girls">O Level Girls</button>
-    </nav>
+    <!-- Subheadings Section -->
+    <section class="text-center mt-4">
+        <nav class="flex justify-around">
+            <a href="#" class="text-xl font-semibold hover:text-blue-600">A Level Boys</a>
+            <a href="#" class="text-xl font-semibold hover:text-blue-600">A Level Girls</a>
+            <a href="#" class="text-xl font-semibold hover:text-blue-600">O Level Boys</a>
+            <a href="#" class="text-xl font-semibold hover:text-blue-600">O Level Girls</a>
+        </nav>
+    </section>
 
-    <!-- Sports Sections -->
-    <div id="sports" class="container mx-auto mt-8 p-4">
-        <!-- Dynamic sports list populated by JavaScript -->
-        <div id="sport-list" class="grid grid-cols-2 sm:grid-cols-4 gap-6"></div>
-    </div>
+    <!-- House Logos and Links -->
+    <section class="mt-8 text-center">
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Papworth -->
+            <div>
+                <a href="papworth.html">
+                    <img src="C:/Users/arsha/Downloads/Schl related/KGS/ATLAS WORK/house logos/Papworth.jpg" alt="Papworth Logo" class="mx-auto h-24">
+                    <p class="mt-2 text-lg font-bold">Papworth</p>
+                </a>
+            </div>
+            <!-- Streeton -->
+            <div>
+                <a href="streeton.html">
+                    <img src="C:/Users/arsha/Downloads/Schl related/KGS/ATLAS WORK/house logos/Streeton.jpg" alt="Streeton Logo" class="mx-auto h-24">
+                    <p class="mt-2 text-lg font-bold">Streeton</p>
+                </a>
+            </div>
+            <!-- Frere -->
+            <div>
+                <a href="frere.html">
+                    <img src="C:/Users/arsha/Downloads/Schl related/KGS/ATLAS WORK/house logos/Frere.jpg" alt="Frere Logo" class="mx-auto h-24">
+                    <p class="mt-2 text-lg font-bold">Frere</p>
+                </a>
+            </div>
+            <!-- Napier -->
+            <div>
+                <a href="napier.html">
+                    <img src="C:/Users/arsha/Downloads/Schl related/KGS/ATLAS WORK/house logos/Napier.jpg" alt="Napier Logo" class="mx-auto h-24">
+                    <p class="mt-2 text-lg font-bold">Napier</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <!-- Matches Section -->
-    <div id="matches-section" class="container mx-auto mt-8 p-4 matches-section">
-        <h2 class="text-2xl font-bold mb-4">Matches</h2>
-        <table class="table-auto w-full text-left bg-white shadow-md rounded-lg">
-            <thead>
-                <tr class="bg-blue-100">
-                    <th class="px-4 py-2">Match</th>
-                    <th class="px-4 py-2">Teams</th>
-                    <th class="px-4 py-2">Score</th>
-                    <th class="px-4 py-2">Player of the Match</th>
-                </tr>
-            </thead>
-            <tbody id="match-list" class="bg-white">
-                <!-- Matches will be dynamically added here -->
-            </tbody>
-        </table>
-    </div>
-
-    <!-- JavaScript for Dynamic Interaction -->
-    <script>
-        // Data for sports
-        const sports = ["Basketball", "Football", "Volleyball", "Table Tennis", "Scrabble", "Chess", "Rowing", "Cricket"];
-        
-        // Mock match data (including sport-specific scores and Player of the Match)
-        const matchData = {
-            "Basketball": [
-                { match: "Match 1", teams: "Streeton vs Frere", score: "48 - 42", player: "John Doe" },
-                { match: "Match 2", teams: "Papworth vs Napier", score: "54 - 51", player: "Alex Smith" },
-                { match: "Match 3", teams: "Frere vs Papworth", score: "39 - 45", player: "Michael Brown" },
-                { match: "Match 4", teams: "Streeton vs Napier", score: "60 - 58", player: "David Lee" },
-                { match: "Match 5", teams: "Napier vs Frere", score: "50 - 47", player: "Chris Evans" },
-                { match: "Match 6", teams: "Streeton vs Papworth", score: "45 - 50", player: "James Bond" }
-            ],
-            "Football": [
-                { match: "Match 1", teams: "Streeton vs Frere", score: "2 - 1", player: "David Beckham" },
-                { match: "Match 2", teams: "Papworth vs Napier", score: "1 - 1", player: "Cristiano Ronaldo" },
-                { match: "Match 3", teams: "Frere vs Papworth", score: "3 - 2", player: "Lionel Messi" },
-                { match: "Match 4", teams: "Streeton vs Napier", score: "2 - 3", player: "Kylian Mbappé" },
-                { match: "Match 5", teams: "Napier vs Frere", score: "0 - 0", player: "Neymar" },
-                { match: "Match 6", teams: "Streeton vs Papworth", score: "4 - 2", player: "Mo Salah" }
-            ],
-            "Cricket": [
-                { match: "Match 1", teams: "Streeton vs Frere", score: "120/7 - 119/10", player: "Virat Kohli" },
-                { match: "Match 2", teams: "Papworth vs Napier", score: "160/6 - 158/9", player: "Joe Root" },
-                { match: "Match 3", teams: "Frere vs Papworth", score: "110/10 - 112/8", player: "Ben Stokes" },
-                { match: "Match 4", teams: "Streeton vs Napier", score: "140/5 - 135/10", player: "Rohit Sharma" },
-                { match: "Match 5", teams: "Napier vs Frere", score: "130/8 - 120/10", player: "Steve Smith" },
-                { match: "Match 6", teams: "Streeton vs Papworth", score: "150/4 - 148/10", player: "AB de Villiers" }
-            ]
-            // Add mock data for other sports here (Volleyball, Table Tennis, etc.)
-        };
-
-        const sportListContainer = document.getElementById("sport-list");
-        const matchListContainer = document.getElementById("match-list");
-
-        // On page load, hide sports and matches sections
-        document.getElementById("sports").style.display = "none";
-        document.getElementById("matches-section").style.display = "none";
-
-        // Display sports menu upon selecting a level
-        document.querySelectorAll(".level-btn").forEach(button => {
-            button.addEventListener("click", (e) => {
-                // Show sports options
-                document.getElementById("sports").style.display = "block";
-
-                // Clear previous sports list
-                sportListContainer.innerHTML = "";
-
-                // Populate sports list
-                sports.forEach(sport => {
-                    const sportButton = document.createElement("button");
-                    sportButton.classList.add("bg-blue-600", "text-white", "px-4", "py-2", "rounded", "hover:bg-blue-700");
-                    sportButton.textContent = sport;
-                    sportButton.addEventListener("click", () => displayMatches(sport));
-                    sportListContainer.appendChild(sportButton);
-                });
-            });
-        });
-
-        // Display matches for the selected sport
-        function displayMatches(sport) {
-            document.getElementById("matches-section").style.display = "block";
-            matchListContainer.innerHTML = ""; // Clear previous matches
-
-            // Fetch match data for the selected sport
-            const matches = matchData[sport] || [];
-
-            matches.forEach(match => {
-                // Create match row with mock data
-                const matchRow = document.createElement("tr");
-                matchRow.innerHTML = `
-                    <td class="border px-4 py-2">${match.match}</td>
-                    <td class="border px-4 py-2">${match.teams}</td>
-                    <td class="border px-4 py-2">${match.score}</td>
-                    <td class="border px-4 py-2">${match.player}</td>
-                `;
-                matchListContainer.appendChild(matchRow);
-            });
-        }
-    </script>
+    <!-- Footer -->
+    <footer class="mt-8 p-4 text-center bg-gray-800 text-white">
+        <p>This is a prototype and the website is subject to change.</p>
+    </footer>
 
 </body>
 </html>

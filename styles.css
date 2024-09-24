@@ -1,5 +1,54 @@
-/* Additional hover effect for buttons */
-button:hover {
-    transform: scale(1.05);
-    transition: all 0.2s ease-in-out;
+/* Styling for the main layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+a {
+    color: #1a202c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3182ce;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    padding: 10px 20px;
+    background-color: #e2e8f0;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #cbd5e0;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    background-color: #2d3748;
+    padding: 20px;
+    color: white;
 }
