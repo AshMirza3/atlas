@@ -33,6 +33,9 @@ h1 {
 /* Centering and spacing the nav */
 nav {
     margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Ensure the items are centered */
+    gap: 2rem; /* Add spacing between the items */
 }
 
 nav a {
@@ -45,6 +48,9 @@ nav a {
 
 nav a:hover {
     background-color: #cbd5e0;
+    display: flex;
+    justify-content: center; /* Ensure the items are centered */
+    gap: 2rem; /* Add spacing between the items */
 }
 
 /* Grid for house logos */
@@ -71,3 +77,19 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
+/* Styling for subheadings to ensure proper centering */
+.subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #e2e8f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #1a202c;
+}
+
+.subheading:hover {
+    background-color: #cbd5e0;
+}
+
+
