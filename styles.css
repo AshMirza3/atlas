@@ -7,26 +7,30 @@ body {
     padding: 0;
 }
 
+/* Header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #2b6cb0;
+    padding: 16px;
 }
 
 h1 {
-    text-align: center;
     font-size: 2.5rem;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0;
 }
 
-a {
-    color: #1a202c;
-    text-decoration: none;
+/* Centering images */
+.logo {
+    height: 60px;
+    display: block;
+    margin: 0 auto;
 }
 
-a:hover {
-    color: #3182ce;
-}
-
+/* Centering and spacing the nav */
 nav {
     margin-top: 20px;
 }
@@ -35,20 +39,35 @@ nav a {
     padding: 10px 20px;
     background-color: #e2e8f0;
     border-radius: 5px;
+    text-decoration: none;
+    color: #1a202c;
 }
 
 nav a:hover {
     background-color: #cbd5e0;
 }
 
-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Grid for house logos */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
+.grid div {
+    text-align: center;
+}
+
+.grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
 footer {
     background-color: #2d3748;
     padding: 20px;
     color: white;
+    text-align: center;
+    margin-top: 40px;
 }
