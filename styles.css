@@ -91,5 +91,19 @@ footer {
 .subheading:hover {
     background-color: #cbd5e0;
 }
+.home-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-left: auto; /* Align to the right */
+    background-color: #2b6cb0; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.home-button:hover {
+    background-color: #1e4c8b; /* Darker shade on hover */
+}
 
 
