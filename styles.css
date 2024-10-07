@@ -5,6 +5,9 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header */
@@ -16,26 +19,27 @@ header {
     padding: 16px;
 }
 
+/* Center the heading in the header */
 h1 {
     font-size: 2.5rem;
     text-align: center;
-    flex-grow: 1;
     margin: 0;
+    flex-grow: 1;
 }
 
-/* Centering images */
+/* Ensure logos are correctly sized and centered */
 .logo {
     height: 60px;
     display: block;
     margin: 0 auto;
 }
 
-/* Centering and spacing the nav */
+/* Nav bar for the subheadings */
 nav {
     margin-top: 20px;
     display: flex;
-    justify-content: center; /* Ensure the items are centered */
-    gap: 2rem; /* Add spacing between the items */
+    justify-content: center; /* Center nav items horizontally */
+    gap: 2rem; /* Add spacing between items */
 }
 
 nav a {
@@ -44,20 +48,19 @@ nav a {
     border-radius: 5px;
     text-decoration: none;
     color: #1a202c;
+    font-size: 1.25rem; /* Increase font size for better visibility */
 }
 
 nav a:hover {
     background-color: #cbd5e0;
-    display: flex;
-    justify-content: center; /* Ensure the items are centered */
-    gap: 2rem; /* Add spacing between the items */
 }
 
-/* Grid for house logos */
+/* Grid layout for house logos */
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Two columns for logos */
     gap: 20px;
+    justify-items: center; /* Center each grid item */
 }
 
 .grid div {
@@ -69,15 +72,16 @@ nav a:hover {
     height: auto;
 }
 
-/* Footer */
+/* Footer stays at the bottom */
 footer {
     background-color: #2d3748;
     padding: 20px;
     color: white;
     text-align: center;
-    margin-top: 40px;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
-/* Styling for subheadings to ensure proper centering */
+
+/* Subheadings */
 .subheading {
     font-size: 1.5rem;
     font-weight: 600;
@@ -86,15 +90,18 @@ footer {
     border-radius: 5px;
     text-decoration: none;
     color: #1a202c;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .subheading:hover {
     background-color: #cbd5e0;
 }
+
+/* Home button styling */
 .home-button {
     display: inline-block;
     padding: 10px 15px;
-    margin-left: auto; /* Align to the right */
     background-color: #2b6cb0; /* Button color */
     color: white; /* Text color */
     text-decoration: none; /* Remove underline */
@@ -105,14 +112,18 @@ footer {
 .home-button:hover {
     background-color: #1e4c8b; /* Darker shade on hover */
 }
+
+/* Match container */
 .match-container {
     background-color: #f9f9f9;
     border: 2px solid #2b6cb0; /* Match border color */
     border-radius: 8px;
     padding: 10px;
     text-align: center;
+    margin: 10px 0; /* Spacing between match blocks */
 }
 
+/* Match details */
 .match {
     display: flex;
     flex-direction: column;
@@ -138,5 +149,3 @@ footer {
     margin-top: 5px;
     color: #2b6cb0; /* MOM color */
 }
-
-
