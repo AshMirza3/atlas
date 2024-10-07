@@ -149,3 +149,13 @@ footer {
     margin-top: 5px;
     color: #2b6cb0; /* MOM color */
 }
+.team-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+
+.vs {
+    margin: 0 10px; /* Adjust spacing between scores and VS as needed */
+}
