@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basketball Matches</title>
+    <title>Basketball - A Level Boys</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="flex flex-col min-h-screen">
@@ -14,112 +14,81 @@
             <img src="house logos/Streeton.jpg" alt="KGS Logo" class="logo">
         </div>
         
-        <h1 class="text-3xl font-bold mx-auto">Basketball Matches</h1>
+        <h1 class="text-3xl font-bold mx-auto">Basketball - A Level Boys</h1>
         
-        <div class="flex items-center space-x-4">
+        <div>
             <a href="index.html" class="home-button">Home</a>
             <img src="atlas logo.jpg" alt="Atlas Logo" class="logo">
         </div>
     </header>
 
     <!-- Main Content Section -->
-    <main class="flex-grow flex flex-col items-center justify-center mt-8">
-        <h2 class="text-2xl font-bold mb-4">Match Scores</h2>
-
-        <!-- Match Display -->
-        <div class="match-container mb-8">
-            <div class="match">
-                <div class="team-score">
-                    <span class="team">Streeton</span>
-                    <span class="score">19</span>
+    <main class="flex-grow flex flex-col items-center justify-center p-4">
+        <div class="text-center">
+            <h2 class="text-2xl font-bold mb-4">Match Scores</h2>
+            
+            <div class="match-container">
+                <div class="match">
+                    <div class="team-score">
+                        <span>Streeton : 19</span>
+                        <span class="vs">VS</span>
+                        <span>Frere : 2</span>
+                    </div>
+                    <div class="mom">MOM: Arshaan Mirza</div>
                 </div>
-                <div class="vs">VS</div>
-                <div class="team-score">
-                    <span class="team">Frere</span>
-                    <span class="score">2</span>
+                <div class="match">
+                    <div class="team-score">
+                        <span>Papworth : 10</span>
+                        <span class="vs">VS</span>
+                        <span>Napier : 15</span>
+                    </div>
+                    <div class="mom">MOM: Sameer Ali</div>
                 </div>
-                <div class="mom">MOM: Arshaan Mirza</div>
+                <div class="match">
+                    <div class="team-score">
+                        <span>Frere : 8</span>
+                        <span class="vs">VS</span>
+                        <span>Papworth : 12</span>
+                    </div>
+                    <div class="mom">MOM: David O'Neil</div>
+                </div>
+                <div class="match">
+                    <div class="team-score">
+                        <span>Streeton : 20</span>
+                        <span class="vs">VS</span>
+                        <span>Napier : 18</span>
+                    </div>
+                    <div class="mom">MOM: Justin Smith</div>
+                </div>
+                <div class="match">
+                    <div class="team-score">
+                        <span>Napier : 7</span>
+                        <span class="vs">VS</span>
+                        <span>Frere : 9</span>
+                    </div>
+                    <div class="mom">MOM: Luke Connor</div>
+                </div>
+                <div class="match">
+                    <div class="team-score">
+                        <span>Streeton : 22</span>
+                        <span class="vs">VS</span>
+                        <span>Papworth : 11</span>
+                    </div>
+                    <div class="mom">MOM: Amir Javed</div>
+                </div>
             </div>
-        </div>
 
-        <div class="match-container mb-8">
-            <div class="match">
-                <div class="team-score">
-                    <span class="team">Papworth</span>
-                    <span class="score">30</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team-score">
-                    <span class="team">Napier</span>
-                    <span class="score">15</span>
-                </div>
-                <div class="mom">MOM: Lisa Thompson</div>
-            </div>
-        </div>
-
-        <div class="match-container mb-8">
-            <div class="match">
-                <div class="team-score">
-                    <span class="team">Frere</span>
-                    <span class="score">10</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team-score">
-                    <span class="team">Papworth</span>
-                    <span class="score">25</span>
-                </div>
-                <div class="mom">MOM: Jake Smith</div>
-            </div>
-        </div>
-
-        <div class="match-container mb-8">
-            <div class="match">
-                <div class="team-score">
-                    <span class="team">Streeton</span>
-                    <span class="score">12</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team-score">
-                    <span class="team">Napier</span>
-                    <span class="score">18</span>
-                </div>
-                <div class="mom">MOM: Sarah Connor</div>
-            </div>
-        </div>
-
-        <div class="match-container mb-8">
-            <div class="match">
-                <div class="team-score">
-                    <span class="team">Napier</span>
-                    <span class="score">22</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team-score">
-                    <span class="team">Frere</span>
-                    <span class="score">14</span>
-                </div>
-                <div class="mom">MOM: Mark Johnson</div>
-            </div>
-        </div>
-
-        <div class="match-container mb-8">
-            <div class="match">
-                <div class="team-score">
-                    <span class="team">Streeton</span>
-                    <span class="score">15</span>
-                </div>
-                <div class="vs">VS</div>
-                <div class="team-score">
-                    <span class="team">Papworth</span>
-                    <span class="score">28</span>
-                </div>
-                <div class="mom">MOM: Emily Davis</div>
+            <!-- Embedded Schedule -->
+            <h2 class="text-2xl font-bold mt-8">Schedule</h2>
+            <div class="playpass playpass-widget mt-4">
+                <script src="https://playpass.com/widgets/R2U9ynB.js"></script>
+                <p>Schedule created with <a href="https://playpass.com/sports-software/basketball-schedule-maker">basketball scheduler</a> by Playpass</p>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
         <p>This is a prototype and the website is subject to change.</p>
     </footer>
 
