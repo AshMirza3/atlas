@@ -1,4 +1,4 @@
-/* General styling for the main layout */
+/* Styling for the main layout */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -14,11 +14,12 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #800020;
+    justify-content: center; /* Centers all items horizontally */
+    background-color: #800020; /* Maroon background */
     padding: 16px;
-    color: white;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    color: white; /* White text for contrast */
+    flex-wrap: wrap;
+    position: relative; /* Allows positioning of the home button */
 }
 
 h1 {
@@ -28,10 +29,9 @@ h1 {
     margin: 0;
 }
 
-/* Centering images */
+/* Centering the logo */
 .logo {
     height: 60px;
-    display: block;
     margin: 0 auto;
 }
 
@@ -46,15 +46,15 @@ nav {
 
 nav a {
     padding: 10px 20px;
-    background-color: #001f5b;
+    background-color: #001f5b; /* Navy blue background for nav links */
     border-radius: 5px;
     text-decoration: none;
-    color: #ffffff;
+    color: #ffffff; /* White text */
     font-weight: bold;
 }
 
 nav a:hover {
-    background-color: #0a3a78;
+    background-color: #0a3a78; /* Lighter navy for hover */
 }
 
 /* Grid for house logos */
@@ -75,7 +75,7 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #800020;
+    background-color: #800020; /* Maroon background */
     padding: 20px;
     color: white;
     text-align: center;
@@ -87,7 +87,7 @@ footer {
     font-size: 1.5rem;
     font-weight: 600;
     padding: 10px 20px;
-    background-color: #001f5b;
+    background-color: #001f5b; /* Navy blue background */
     border-radius: 5px;
     text-decoration: none;
     color: #ffffff;
@@ -99,10 +99,12 @@ footer {
 
 /* Home button styling */
 .home-button {
-    display: inline-block;
+    position: absolute;
+    right: 16px; /* Aligns the home button to the far right */
+    top: 50%;
+    transform: translateY(-50%);
     padding: 10px 15px;
-    margin-left: auto;
-    background-color: #001f5b;
+    background-color: #001f5b; /* Navy blue background */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -116,7 +118,7 @@ footer {
 /* Match container for consistent alignment */
 .match-container {
     background-color: #f9f9f9;
-    border: 2px solid #800020;
+    border: 2px solid #800020; /* Maroon border */
     border-radius: 8px;
     padding: 10px;
     text-align: center;
@@ -145,7 +147,7 @@ footer {
 .mom {
     font-style: italic;
     margin-top: 5px;
-    color: #800020;
+    color: #800020; /* Maroon color for emphasis */
 }
 
 /* Responsive Design */
@@ -171,6 +173,19 @@ footer {
 
     .subheading {
         font-size: 1.25rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-button {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        margin-top: 10px; /* Adds space between logo and button */
     }
 }
 
