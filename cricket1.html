@@ -7,70 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="flex flex-col min-h-screen">
+
+    <!-- Header Section -->
     <header class="flex justify-between items-center p-4 bg-blue-800 text-white">
-        <img src="house logos/Streeton.jpg" alt="KGS Logo" class="logo">
+        <div>
+            <img src="house logos/Streeton.jpg" alt="KGS Logo" class="logo">
+        </div>
+        
         <h1 class="text-3xl font-bold mx-auto">Cricket - A Level Boys</h1>
-        <a href="index.html" class="home-button">Home</a>
-        <img src="atlas logo.jpg" alt="Atlas Logo" class="logo">
+        
+        <div>
+            <a href="index.html" class="home-button">Home</a>
+            <img src="atlas logo.jpg" alt="Atlas Logo" class="logo">
+        </div>
     </header>
 
-    <main class="flex-grow">
-        <div class="text-center">
-            <h2 class="text-2xl font-bold mb-4">Cricket Matches</h2>
-
-            <!-- Match 1 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Streeton: 120/8 (20 overs) <span class="vs">VS</span> Frere: 115/9 (20 overs)</div>
-                    <div class="mom">MOM: Player M</div>
-                </div>
-            </div>
-
-            <!-- Match 2 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Papworth: 140/6 (20 overs) <span class="vs">VS</span> Napier: 130/7 (20 overs)</div>
-                    <div class="mom">MOM: Player N</div>
-                </div>
-            </div>
-
-            <!-- Match 3 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Frere: 150/4 (20 overs) <span class="vs">VS</span> Papworth: 147/8 (20 overs)</div>
-                    <div class="mom">MOM: Player O</div>
-                </div>
-            </div>
-
-            <!-- Match 4 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Streeton: 180/5 (20 overs) <span class="vs">VS</span> Napier: 150/9 (20 overs)</div>
-                    <div class="mom">MOM: Player P</div>
-                </div>
-            </div>
-
-            <!-- Match 5 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Napier: 120/7 (20 overs) <span class="vs">VS</span> Frere: 110/10 (20 overs)</div>
-                    <div class="mom">MOM: Player Q</div>
-                </div>
-            </div>
-
-            <!-- Match 6 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Streeton: 130/6 (20 overs) <span class="vs">VS</span> Papworth: 128/9 (20 overs)</div>
-                    <div class="mom">MOM: Player R</div>
-                </div>
-            </div>
-
+    <!-- Main Content Section -->
+    <main class="flex-grow flex flex-col items-center justify-center p-4">
+        <h2 class="text-2xl font-bold mt-8">Schedule</h2>
+        <div class="playpass playpass-widget mt-4">
+            <script src="https://playpass.com/widgets/RgF9B9t.js"></script>
+            <p>Schedule created with <a href="https://playpass.com/sports-software/cricket-schedule-maker">cricket scheduler</a> by Playpass</p>
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
         <p>This is a prototype and the website is subject to change.</p>
     </footer>
+
 </body>
 </html>
