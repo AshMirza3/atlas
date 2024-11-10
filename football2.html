@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="flex flex-col min-h-screen">
+    <!-- Header Section -->
     <header class="flex justify-between items-center p-4 bg-blue-800 text-white">
         <img src="house logos/Streeton.jpg" alt="KGS Logo" class="logo">
         <h1 class="text-3xl font-bold mx-auto">Football - A Level Girls</h1>
@@ -14,61 +15,20 @@
         <img src="atlas logo.jpg" alt="Atlas Logo" class="logo">
     </header>
 
+    <!-- Main Content Section -->
     <main class="flex-grow">
         <div class="text-center">
-            <h2 class="text-2xl font-bold mb-4">Football Matches</h2>
+            <h2 class="text-2xl font-bold mb-4">Football Schedule</h2>
 
-            <!-- Match 1 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Streeton : 3 <span class="vs">VS</span> Frere : 1</div>
-                    <div class="mom">MOM: Player G</div>
-                </div>
+            <!-- Embedded Schedule -->
+            <div class="playpass playpass-widget">
+                <script src="https://playpass.com/widgets/RhW6tVr.js"></script>
+                <p>Schedule created with <a href="https://playpass.com/sports-software/soccer-schedule-maker">soccer scheduler</a> by Playpass</p>
             </div>
-
-            <!-- Match 2 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Papworth : 2 <span class="vs">VS</span> Napier : 4</div>
-                    <div class="mom">MOM: Player H</div>
-                </div>
-            </div>
-
-            <!-- Match 3 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Frere : 2 <span class="vs">VS</span> Papworth : 3</div>
-                    <div class="mom">MOM: Player I</div>
-                </div>
-            </div>
-
-            <!-- Match 4 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Streeton : 5 <span class="vs">VS</span> Napier : 0</div>
-                    <div class="mom">MOM: Player J</div>
-                </div>
-            </div>
-
-            <!-- Match 5 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Napier : 1 <span class="vs">VS</span> Frere : 1</div>
-                    <div class="mom">MOM: Player K</div>
-                </div>
-            </div>
-
-            <!-- Match 6 -->
-            <div class="match-container">
-                <div class="match">
-                    <div class="team-score">Streeton : 2 <span class="vs">VS</span> Papworth : 1</div>
-                    <div class="mom">MOM: Player L</div>
-                </div>
-            </div>
-
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white p-4 text-center">
         <p>This is a prototype and the website is subject to change.</p>
     </footer>
